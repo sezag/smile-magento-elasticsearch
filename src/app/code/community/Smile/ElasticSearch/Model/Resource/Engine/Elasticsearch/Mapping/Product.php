@@ -350,7 +350,7 @@ class Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch_Mapping_Product
         $searchInCategorySettingsPathPrefix = $advancedSettingsPathPrefix . 'search_in_category_name_';
         $isSearchable = (bool) Mage::getStoreConfig($advancedSettingsPathPrefix . 'search_in_category_name');
         if (in_array($searchType, array(self::SEARCH_TYPE_FUZZY, self::SEARCH_TYPE_PHONETIC))) {
-            $isSearchable = $isSearchable && (bool) Mage::getStoreConfig($searchInCategorySettingsPathPrefix . 'fuzzy');
+            $isSearchable = $isSearchable && (bool) Mage::getStoreConfig($searchInCategorySettingsPathPrefix . 'enable_fuzzy');
         } else if ($searchType == self::SEARCH_TYPE_AUTOCOMPLETE) {
             $isSearchable = $isSearchable && (bool) Mage::getStoreConfig($searchInCategorySettingsPathPrefix . 'use_in_autocomplete');
         }

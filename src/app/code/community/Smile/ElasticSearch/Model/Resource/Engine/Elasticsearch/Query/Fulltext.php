@@ -296,7 +296,7 @@ class Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch_Query_Fulltext
     protected function _getFuzzySearchFields()
     {
         $fuzzySearchFields =  $this->getSearchFields(
-            Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch_Mapping_Abstract::SEARCH_TYPE_NORMAL, 'whitespace'
+            Smile_ElasticSearch_Model_Resource_Engine_Elasticsearch_Mapping_Abstract::SEARCH_TYPE_FUZZY, 'whitespace'
         );
         $fuzzySearchFields[] = $this->_getDefaultSearchField() . '.shingle';
         return $fuzzySearchFields;
